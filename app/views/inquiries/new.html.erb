@@ -1,0 +1,35 @@
+<div id="contenedor">
+
+<h1 class="form">CONTACT US</h1>
+
+<%= error_messages_for :inquiry %>
+<div class="generic_form">
+	<% form_for(:inquiry, :url => collection_url) do |f| %>
+	  <p><%= f.label :name, "Your Name" %>
+		   <%= f.text_field :name, :class => 'required' %>
+		</p>
+		<p><%= f.label :email, "Your Email Address" %>
+		   <%= f.text_field :email, :class => 'required email' %>
+		</p>
+		<p><%= f.label :name, "Type of Inquiry" %>
+		   <%= f.select :inquiry_type, ("Información, Compras") %>
+		</p>
+		<p><%= f.label :order_no, "Order #" %>
+		   <%= f.text_field :order_no %>
+		</p>
+		<p><%= f.label :message, "Message" %>
+		   <%= f.text_area :message, :class => 'required' %>
+		</p>
+		
+	  <p>
+	    <%= submit_tag "Send It!" %>
+	  </p>
+	<% end %>
+	<script>
+	  $(document).ready(function(){
+	    $(".generic_form form").validate();
+	  });
+	  </script>
+</div>
+
+</div>
