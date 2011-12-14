@@ -1,20 +1,28 @@
-SpreeContactU
+Spree Contac tUs
 =============
 
-Introduction goes here.
+Spree extension for contact tasks.
 
+Requirements
+------------
 
-Example
-=======
+You need have installed the following software on the computer:
 
-Example goes here.
+* Ruby 1.9.2 or higher
+* Rails 3.1
+* Spree 0.70.x
 
-Testing
--------
+Installation
+------------
 
-Be sure to add the rspec-rails gem to your Gemfile and then create a dummy test app for the specs to run against.
+Add the following to your Gemfile:
 
-    $ bundle exec rake test app
-    $ bundle exec rspec spec
+	gem 'spree_contact_us', :git => 'git://github.com/softwhisper/spree_contact_us.git'
 
-Copyright (c) 2011 [name of extension creator], released under the New BSD License
+Intall the gem:
+
+	bundle install
+	
+To copy and apply migrations run:
+
+	rails g spree_contact_us:install

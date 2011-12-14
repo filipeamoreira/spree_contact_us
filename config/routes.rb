@@ -1,7 +1,12 @@
-# Put your extension routes here.
+Rails.application.routes.draw do
+  
+  resources :inquiries, :as => 'contact'
+  
+  namespace :admin do |admin|
+    resources :inquiries
+  end 
 
-map.resources :inquiries, :as => 'contact'
+end
 
-map.namespace :admin do |admin|
-  admin.resources :inquiries
-end  
+
+ 
