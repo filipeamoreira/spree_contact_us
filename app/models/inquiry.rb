@@ -1,9 +1,15 @@
 class Inquiry < ActiveRecord::Base
   
-  validates_presence_of :email
-  validates_presence_of :message
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
-  after_save :deliver_notification_email
+  validates :name, :presence => true,
+                   :length => { :maximum => 50 }
+  validates :email, :presence => true,
+                    :format => { :with => email_regex }
+  validates :message, :presence => true
+  
+  
+  #after_save :deliver_notification_email
   
   
   def deliver_notification_email

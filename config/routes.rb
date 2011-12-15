@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :inquiries, :as => 'contact'
+  resources :inquiries
   
   namespace :admin do |admin|
     resources :inquiries

@@ -1,5 +1,13 @@
-<% content_for :page_title do %>
-	Thanks for getting in touch
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>"><%= value %></div>
 <% end %>
 
-In the meantime, don't forget to check our <%= link_to "FAQ section", '/faqs' %>.
+<div>
+	<div><%= t :name %> <%= @inquiry.name %><div>
+	<div><%= t :phone %> <%= @inquiry.phone %><div>
+	<div><%= t :mail %> <%= @inquiry.email %><div>
+	<div><%= t :contact_time %> <%= @inquiry.contact_time %><div>
+	<div><%= t :order_number %> <%= @inquiry.order_number %><div>
+	<div><%= t :type_inquiry %><%= @inquiry.type_inquiry %><div>
+	<div><%= t :message %> <%= @inquiry.message %><div>
+<div>

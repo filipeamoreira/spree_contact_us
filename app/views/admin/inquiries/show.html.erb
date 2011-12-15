@@ -1,23 +1,27 @@
 <h1>Contact Us Form</h1>
-
-
 			<p>
-				Name: <%= @inquiry.name %>
+				<%= t :name %>: <%= @inquiry.name %>
 			</p>
 			<p>
-				Email: <%= @inquiry.email %>
+				<%= t :phone %>: <%= @inquiry.phone %>
 			</p>
 			<p>
-				Type: <%= @inquiry.inquiry_type %>
+				<%= t :mail %>: <%= @inquiry.email %>
 			</p>
 			<p>
-				Order Number: <%= @inquiry.order_no %>
+				<%= t :contact_time %>: <%= @inquiry.contact_time %>
 			</p>
 			<p>
-				Message: <%=h @inquiry.message %>
+				<%= t :type_inquiry %>: <%= @inquiry.type_inquiry %>
 			</p>
 			<p>
-	<%= link_to "Back", collection_url %> |      
-	<%=link_to t("delete"), object_url(@inquiry), :method => :delete %>
+				<%= t :order_number %>: <%= @inquiry.order_number %>
+			</p>
+			<p>
+				<%= t :message %>: <%=h @inquiry.message %>
+			</p>
+			<p>
+				<%= link_to t(:back), admin_inquiries_path %> |      
+				<%=link_to t(:delete),  admin_inquiry_path(@inquiry) , :method => :delete %>
 	     </p>
 		</tr>

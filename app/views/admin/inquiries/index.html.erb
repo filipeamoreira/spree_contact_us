@@ -1,14 +1,16 @@
-<h1>Contact Us Forms</h1>
-<h4>This is a list of all the Contact Us forms submitted on the site. You also receive copies of these inquiries by email.</h4>
+<h1><%= t :admin_index_title %></h1>
+<h4><%= t :admin_index_info %></h4>
 
 <table class="admin-report" width="545">
 	<thead>
 		<tr>
-      		<th>Name</th>
-      		<th>Email</th>
-      		<th>Type</th>
-					<th>Order #</th>
-					<th>message</th>
+      		<th><%= t :name %></th>
+					<th><%= t :phone %></th>
+      		<th><%= t :email %></th>
+      		<th><%= t :conctact_time %></th>
+      		<th><%= t :type_inquiry %></th>
+					<th><%= t :order_number %></th>
+					<th><%= t :message %></th>
 					<th></th>
     	</tr>
   	</thead>
@@ -20,23 +22,28 @@
 				<%= inquiry.name %>
 			</td>
 			<td>
+				<%= inquiry.phone %>
+			</td>
+			<td>
 				<%= inquiry.email %>
 			</td>
 			<td>
-				<%= inquiry.inquiry_type %>
+				<%= inquiry.contact_time %>
 			</td>
 			<td>
-				<%= inquiry.order_no %>
+				<%= inquiry.type_inquiry %>
 			</td>
 			<td>
-				<%=h truncate(inquiry.message, 100) %>
+				<%= inquiry.order_number %>
 			</td>
 			<td>
-				<%= link_to "Check it", object_url(inquiry) %> | 
-	      <%=link_to "Delete it", object_url(inquiry), :method => :delete %>
+				<%= truncate(inquiry.message, :lenght=> 20) %>
+			</td>
+			<td>
+				<%= link_to t(:show_more), admin_inquiry_path(inquiry) %> | 
+	      <%=link_to t(:delete), admin_inquiry_path(inquiry) , :method => :delete %>
 	     </td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
-

@@ -1,35 +1,36 @@
-<div id="contenedor">
+<h1>Contact Us</h1>
 
-<h1 class="form">CONTACT US</h1>
-
-<%= error_messages_for :inquiry %>
-<div class="generic_form">
-	<% form_for(:inquiry, :url => collection_url) do |f| %>
-	  <p><%= f.label :name, "Your Name" %>
-		   <%= f.text_field :name, :class => 'required' %>
-		</p>
-		<p><%= f.label :email, "Your Email Address" %>
-		   <%= f.text_field :email, :class => 'required email' %>
-		</p>
-		<p><%= f.label :name, "Type of Inquiry" %>
-		   <%= f.select :inquiry_type, ("Información, Compras") %>
-		</p>
-		<p><%= f.label :order_no, "Order #" %>
-		   <%= f.text_field :order_no %>
-		</p>
-		<p><%= f.label :message, "Message" %>
-		   <%= f.text_area :message, :class => 'required' %>
-		</p>
-		
-	  <p>
-	    <%= submit_tag "Send It!" %>
-	  </p>
-	<% end %>
-	<script>
-	  $(document).ready(function(){
-	    $(".generic_form form").validate();
-	  });
-	  </script>
-</div>
-
-</div>
+<%= form_for(@inquiry) do |f| %>
+	<%= render 'shared/error_messages', :object => f.object %>
+	<div class="field">
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :phone %><br />
+		<%= f.text_field :phone %>
+	</div>
+	<div class="field">
+		<%= f.label :email %><br />
+		<%= f.text_field :email %>
+	</div>
+	<div class="field">
+		<%= f.label :contact_time %>
+		<%= f.select :contact_time, (1..2).map {|b| t "contact_time_#{b}"} %>
+	</div>
+	<div class="field">
+		<%= f.label :type_inquiry, t(:do_you_want) %>
+		<%= f.select :type_inquiry, (1..9).map {|b| t "type_inquiry_#{b}"} %>
+	</div>
+	<div class="field">
+		<%= f.label :order_number %>
+		<%= f.text_field :order_number %>
+	</div>
+	<div class="field">
+		<%= f.label :message %>
+		<%= f.text_area :message %>
+	</div>
+	<div class="field">
+		<%= f.submit "Sent It!" %>
+	</div>
+<% end %>
