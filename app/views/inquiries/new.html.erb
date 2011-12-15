@@ -1,36 +1,45 @@
-<h1>Contact Us</h1>
+<%= stylesheet_link_tag "store/spree_contact_us" %>
 
-<%= form_for(@inquiry) do |f| %>
-	<%= render 'shared/error_messages', :object => f.object %>
-	<div class="field">
-		<%= f.label :name %><br />
-		<%= f.text_field :name %>
+
+<div id="form02ModalBox">
+	<div id="form02Modal">
+		<%= form_for @inquiry, :id => "forma06" do |f| %>
+			<div style="margin:0;padding:0;display:inline">
+				<%= render 'shared/error_messages', :object => f.object %>
+				<a class="close" href="javascript:;" onclick="parent.$.fancybox.close();"><img src="/images/botonClose25x25.png" alt="cierra esta forma"></a>
+  			<p class="intro">¿Tienes alguna duda? ¿Necesitas ayuda? ¿Quieres hacernos alguna consulta? Estás peZ con algún problema? ¡Cuéntanoslo! Nuestro equipo del 	defensor del peZcador se pondrá en contacto contigo en un santiamén.</p>
+				<p class="intro">Si lo prefieres, puedes llamarnos de 10 a 14 horas. Nuestro teléfono es <strong>881-984-494</strong></p>
+				<p>
+					<label><%= f.label :name %></label>
+					<%= f.text_field :name %>
+				</p>
+				<p>
+					<label><%= f.label :email %></label>
+					<%= f.text_field :email %>
+				</p>
+				<p>
+					<label><%= f.label :phone %></label>
+					<%= f.text_field :phone %>
+				</p>
+				<p>
+					<label>	<%= f.label :contact_time %></label>
+					<%= f.select :contact_time, (1..2).map {|b| t "contact_time_#{b}"} %>
+				</p>
+				<p>
+					<label><%= f.label :type_inquiry, t(:do_you_want) %></label>
+					<%= f.select :type_inquiry, (1..9).map {|b| t "type_inquiry_#{b}"} %>
+				</p>
+				<p>
+					<label><%= f.label :order_number %></label>
+					<%= f.text_field :order_number %>
+				</p>
+				<p class="long">
+					<%= f.label :message %></strong>
+				</p>
+				<p class="long">
+					<%= f.text_area :message %>
+				</p>
+					<%= f.submit "Sent It!" %>
+		<% end %>
 	</div>
-	<div class="field">
-		<%= f.label :phone %><br />
-		<%= f.text_field :phone %>
-	</div>
-	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</div>
-	<div class="field">
-		<%= f.label :contact_time %>
-		<%= f.select :contact_time, (1..2).map {|b| t "contact_time_#{b}"} %>
-	</div>
-	<div class="field">
-		<%= f.label :type_inquiry, t(:do_you_want) %>
-		<%= f.select :type_inquiry, (1..9).map {|b| t "type_inquiry_#{b}"} %>
-	</div>
-	<div class="field">
-		<%= f.label :order_number %>
-		<%= f.text_field :order_number %>
-	</div>
-	<div class="field">
-		<%= f.label :message %>
-		<%= f.text_area :message %>
-	</div>
-	<div class="field">
-		<%= f.submit "Sent It!" %>
-	</div>
-<% end %>
+</div>

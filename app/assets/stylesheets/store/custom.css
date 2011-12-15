@@ -1,46 +1,117 @@
-/* Form */
-div.field, div.actions {
-  margin-bottom: 10px;
-	background: #red;
+* {
+	margin: 0;
+	padding: 0;
+}
+	
+body {
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 12px;
+}
+	
+input, textarea {
+	border: solid 1px #999;
 }
 
-.field_with_errors {
-  margin-top: 10px;
-  padding: 2px;
-  background-color: red;
-  display: table;
+#form02ModalBox {
+	width: 880px;
+	height: 425px;
+	display: block;
+	background: #000 url('/images/form02Modal880x425.png') top left no-repeat;
+	position: relative;
+}
+	
+#form02Modal {
+	width: 840px;
+	padding-top: 75px;
+	padding-left: 20px;	
 }
 
-.field_with_errors label {
-  color: #fff;
+form { }
+	
+label {
+	width: 150px;
+	font-weight: bolder;
+	float: left;
 }
 
-#error_explanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+input {
+	line-height: 20px;
+	height: 20px;
+	width: 255px;
+	float: left;
 }
 
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+select {
+	border: 1px solid #999;
+  float: left;
+  margin: 0;
+  outline: 0 none;
+  padding: 1px;
+	width: 255px;
 }
 
-#error_explanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+p {
+	display: block;
+	padding: 5px 0;
+	width: 420px;
+	line-height: 22px;
+	height: 22px;
+	float: left;
+}
+	
+p.intro {
+	height: auto;
+	line-height: 16px;
+	padding: 0 0 15px;
+	width: 820px;
 }
 
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+p.long {
+	clear: both;
+}
+
+input.submit {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	width: 75px;
+	height: 25px;
+	display: block;
+	color: #fff;
+	background: #f7921e;
+	border: 0 none;
+	padding: 3px 10px;
+	margin: 0;
+	text-transform:uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+textarea#subject {
+	height: 60px;
+  width: 830px;
+}
+
+a.close, a.close:hover {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	top: 17px;
+	right:25px;
+	text-decoration: none;
+	outline: 0 none;
+}
+
+a img {
+	border: 0 none;
+}
+
+.spacer1 {
+	clear: both;
+	height: 1px;
+	display: block;
 }
