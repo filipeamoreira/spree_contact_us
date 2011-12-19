@@ -1,13 +1,40 @@
-<% flash.each do |key, value| %>
-  <div class="flash <%= key %>"><%= value %></div>
-<% end %>
+<%= stylesheet_link_tag "store/spree_contact_us" %>
 
-<div>
-	<div><%= t :name %> <%= @inquiry.name %><div>
-	<div><%= t :phone %> <%= @inquiry.phone %><div>
-	<div><%= t :mail %> <%= @inquiry.email %><div>
-	<div><%= t :contact_time %> <%= @inquiry.contact_time %><div>
-	<div><%= t :order_number %> <%= @inquiry.order_number %><div>
-	<div><%= t :type_inquiry %><%= @inquiry.type_inquiry %><div>
-	<div><%= t :message %> <%= @inquiry.message %><div>
-<div>
+<div id="form02ModalBox">
+	<div id="form02Modal">
+		<a class="close" href="javascript:;" onclick="parent.$.fancybox.close();"><img src="/images/botonClose25x25.png" alt="cierra esta forma"></a>
+		<% flash.each do |key, value| %>
+		  <div class="flash <%= key %>"><%= value %></div>
+		<% end %>
+		<p>
+			<span class="label_show"><%= t :name %></span>
+			<%= @inquiry.name %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :phone %></span>
+			<%= @inquiry.phone %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :mail %></span>
+			<%= @inquiry.email %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :contact_time %></span>
+			<%= @inquiry.contact_time %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :order_number %></span>
+			<%= @inquiry.order_number %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :type_inquiry %></span>	
+			<%= @inquiry.type_inquiry %>
+		</p>
+		<p>
+			<span class="label_show"><%= t :message %></span>
+			<%= @inquiry.message %>
+		</p>
+	</div>
+</div>
+
+

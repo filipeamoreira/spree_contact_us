@@ -13,6 +13,7 @@ class InquiriesController < Spree::BaseController
   def create
     @inquiry = Inquiry.new(params[:inquiry])
     if @inquiry.save
+      InquiryMailer.email_of_inquiry(@inquiry).deliver
       flash[:success] = "Message sent!"
       redirect_to @inquiry
     else

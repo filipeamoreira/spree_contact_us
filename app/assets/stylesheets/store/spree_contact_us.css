@@ -1,8 +1,149 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require store/spree_core
- *= require_self
- *= require_tree . 
-*/
+* {
+	margin: 0;
+	padding: 0;
+}
+	
+body {
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 12px;
+}
+	
+input, textarea {
+	border: solid 1px #999;
+}
+
+#form02ModalBox {
+	width: 880px;
+	height: 425px;
+	display: block;
+	background: #000 url('/images/form02Modal880x425.png') top left no-repeat;
+	position: relative;
+}
+	
+#form02Modal {
+	width: 840px;
+	padding-top: 75px;
+	padding-left: 20px;	
+}
+
+form { }
+	
+label {
+	width: 150px;
+	font-weight: bolder;
+	float: left;
+}
+
+input {
+	line-height: 20px;
+	height: 20px;
+	width: 255px;
+	float: left;
+}
+
+select {
+	border: 1px solid #999;
+  float: left;
+  margin: 0;
+  outline: 0 none;
+  padding: 1px;
+	width: 255px;
+}
+
+p {
+	display: block;
+	padding: 5px 0;
+	width: 420px;
+	line-height: 22px;
+	height: 22px;
+	float: left;
+}
+	
+p.intro {
+	height: auto;
+	line-height: 16px;
+	padding: 0 0 15px;
+	width: 820px;
+}
+
+p.long {
+	clear: both;
+}
+
+.button {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	width: 75px;
+	height: 25px;
+	display: block;
+	color: #fff;
+	background: #f7921e;
+	border: 0 none;
+	padding: 3px 10px;
+	margin: 0;
+	text-transform:uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+a.close, a.close:hover {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	top: 17px;
+	right:25px;
+	text-decoration: none;
+	outline: 0 none;
+}
+
+a img {
+	border: 0 none;
+}
+
+.spacer1 {
+	clear: both;
+	height: 1px;
+	display: block;
+}
+
+textarea#inquiry_message{
+	width: 830px;
+	height: 60px;
+}
+
+/* Messages */
+
+.error, .alert, .notice, .success, .info {
+	padding:0.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+.error, .alert {
+	background:#fbe3e4;
+	color:#8a1f11;
+	border-color:#fbc2c4;
+}
+.notice {
+	background:#fff6bf;
+	color:#514721;
+	border-color:#ffd324;
+}
+.success {
+	background:#e6efc2;
+	color:#264409;
+	border-color:#c6d880;
+}
+.info {
+	background:#d5edf8;
+	color:#205791;
+	border-color:#92cae4;
+}
+
+.label_show {
+	font-weight:bold;
+}

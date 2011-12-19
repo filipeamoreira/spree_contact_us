@@ -8,13 +8,4 @@ class Inquiry < ActiveRecord::Base
                     :format => { :with => email_regex }
   validates :message, :presence => true
   
-  
-  #after_save :deliver_notification_email
-  
-  
-  def deliver_notification_email
-    InquiryMailer.deliver_notification(self)
-  end
-  
-  
 end

@@ -1,10 +1,8 @@
 <%= stylesheet_link_tag "store/spree_contact_us" %>
 
-
 <div id="form02ModalBox">
 	<div id="form02Modal">
 		<%= form_for @inquiry, :id => "forma06" do |f| %>
-			<div style="margin:0;padding:0;display:inline">
 				<%= render 'shared/error_messages', :object => f.object %>
 				<a class="close" href="javascript:;" onclick="parent.$.fancybox.close();"><img src="/images/botonClose25x25.png" alt="cierra esta forma"></a>
   			<p class="intro">¿Tienes alguna duda? ¿Necesitas ayuda? ¿Quieres hacernos alguna consulta? Estás peZ con algún problema? ¡Cuéntanoslo! Nuestro equipo del 	defensor del peZcador se pondrá en contacto contigo en un santiamén.</p>
@@ -39,7 +37,7 @@
 				<p class="long">
 					<%= f.text_area :message %>
 				</p>
-					<%= f.submit "Sent It!" %>
+					<%= f.submit "Sent It!", :class => "button"%>
 		<% end %>
 	</div>
 </div>
