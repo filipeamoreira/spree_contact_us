@@ -40,3 +40,7 @@ Create a initializar with the content:
 	  :authentication       => "plain",
 	  :enable_starttls_auto => true
 	}
+	
+License
+-------
+GNU General Public License, Version 3, 29 June 2007
