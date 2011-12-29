@@ -27,14 +27,16 @@ To copy and apply migrations run:
 
 	rails g spree_contact_us:install
 	
-Create a initializar (config/initializaers/setup_mail.rb) with the content:
+Create a initializar with the content:
 
-ActionMailer::Base.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => "<domain>",
-  :user_name            => "<email>",
-  :password             => "<password>",
-  :authentication       => "plain",
-  :enable_starttls_auto => true
-}
+	# In config/initializaers/setup_mail.rb
+
+	ActionMailer::Base.smtp_settings = {
+	  :address              => "smtp.gmail.com",
+	  :port                 => 587,
+	  :domain               => "<domain>",
+	  :user_name            => "<email>",
+	  :password             => "<password>",
+	  :authentication       => "plain",
+	  :enable_starttls_auto => true
+	}
