@@ -25,3 +25,5 @@ en:
   type_inquiry_9: "...ask a question about your order?"
   contact_time_1: "Morning"
   contact_time_2: "Afternoon"
+  mail:
+    inquiriy_title: "Conctact Form"

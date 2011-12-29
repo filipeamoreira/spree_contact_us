@@ -1,10 +1,11 @@
-Contact Us Form Received
+<%= t 'mail.inquiriy_title' %>
 ========================
 
-From: <%= @inquiry.name %> (<%= @inquiry.email %>)
-Type: <%= @inquiry.type_inquiry %>
-<%= "Order Number: #{@inquiry.order_number}" unless @inquiry.order_number.blank? %>
-
-========================
-Message:
+<%= t :name %>: <%= @inquiry.name %>
+<%= t :phone %>: <%= @inquiry.phone %>
+<%= t :email %>: <%= @inquiry.email %>
+<%= t :contact_time %>: <%= @inquiry.contact_time %>
+<%= t :order_number %>: <%= @inquiry.order_number %>
+<%= t :type_inquiry %>: <%= @inquiry.type_inquiry %>
+<%= t :message %>: 
 <%= @inquiry.message %>

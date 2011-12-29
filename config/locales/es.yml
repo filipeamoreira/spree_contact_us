@@ -25,3 +25,5 @@ es:
   type_inquiry_9: "...hacer una consulta sobre tu pedido?"
   contact_time_1: "Mañana"
   contact_time_2: "Tarde"
+  mail:
+    inquiriy_title: "Formulario de Conctacto"
